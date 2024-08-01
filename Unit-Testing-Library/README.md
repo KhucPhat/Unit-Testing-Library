@@ -9,7 +9,7 @@ Currently, two official plugins are available:
 
 Các thư viện thực hiện unit Test
 - testing library
-- npm install --save-dev @testing-library/react @testing-library/jest-dom @testing-library/user-event
+-npm install --save-dev @testing-library/react @testing-library/dom @types/react @types/react-dom
 - "scripts": {
   "test": "vitest"
 }
