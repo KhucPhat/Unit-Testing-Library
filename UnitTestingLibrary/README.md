@@ -165,6 +165,95 @@ test('submit login form', async () => {
   }));
 });
 
+## Vitest core Api
+- test / it
+
+Dùng để định nghĩa một bài kiểm thử đơn lẻ. Bạn có thể sử dụng test hoặc it (chúng là alias của nhau).
+
+test('mô tả bài kiểm thử', () => {
+  // logic kiểm thử ở đây
+});
+
+it('mô tả bài kiểm thử', () => {
+  // logic kiểm thử ở đây
+});
+
+- expect
+
+Được dùng để tạo các assertion (khẳng định) về trạng thái của mã cần kiểm thử.
+
+expect(value).toBe(expected);
+expect(value).toEqual(expected);
+expect(value).toBeTruthy();
+expect(value).toBeFalsy();
+expect(value).toContain(item);
+
+- vi.fn
+
+Sử dụng để tạo các mock function, tương tự như jest.fn().
+
+const mockFunction = vi.fn();
+mockFunction();
+expect(mockFunction).toHaveBeenCalled();
+
+- beforeEach / afterEach
+
+Chạy một chức năng trước hoặc sau mỗi bài kiểm thử. Thường được sử dụng để thiết lập hoặc dọn dẹp môi trường kiểm thử.
+
+beforeEach(() => {
+  // logic chạy trước mỗi bài kiểm thử
+});
+
+afterEach(() => {
+  // logic chạy sau mỗi bài kiểm thử
+});
+
+- beforeAll / afterAll
+
+Chạy một chức năng trước hoặc sau tất cả các bài kiểm thử trong một file kiểm thử.
+
+beforeAll(() => {
+  // logic chạy một lần trước tất cả các bài kiểm thử
+});
+
+afterAll(() => {
+  // logic chạy một lần sau tất cả các bài kiểm thử
+});
+
+- describe
+
+Dùng để nhóm các bài kiểm thử lại với nhau, giúp tổ chức kiểm thử tốt hơn.
+
+describe('mô tả nhóm kiểm thử', () => {
+  test('bài kiểm thử 1', () => {
+    // logic kiểm thử
+  });
+
+  test('bài kiểm thử 2', () => {
+    // logic kiểm thử
+  });
+});
+
+## Example Vitest
+import { describe, test, expect, vi, beforeEach } from 'vitest';
+
+describe('MyFunction Tests', () => {
+  let mockFunction;
+
+  beforeEach(() => {
+    mockFunction = vi.fn();
+  });
+
+  test('should call the mock function', () => {
+    mockFunction();
+    expect(mockFunction).toHaveBeenCalled();
+  });
+
+  test('should return the correct value', () => {
+    const result = 5;
+    expect(result).toBe(5);
+  });
+}); 
 
 ## Video learn course beginners React Testing
 - React Testing for Beginners: Start Here! - https://www.youtube.com/watch?v=8Xwq35cPwYg
