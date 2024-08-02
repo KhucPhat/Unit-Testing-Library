@@ -15,7 +15,7 @@ Currently, two official plugins are available:
 - Câu lệnh chạy npm run test:ui
 - Cấu hình tại file package.json
 - Cấu hình thêm file vitest.config.ts
-  ```js
+```js
   import { defineConfig } from "vitest/config";
     export default defineConfig({
         test: {
@@ -66,12 +66,12 @@ Currently, two official plugins are available:
   }
 }
 
-## coreApi Testing Library
+## Core Api Testing Library
 - render
 
 Hàm render dùng để render một component React vào trong môi trường giả lập để kiểm thử.
 
-example
+```example
 
 import { render } from '@testing-library/react';
 import MyComponent from './MyComponent';
@@ -85,7 +85,7 @@ const { container, getByText } = render(<MyComponent />);
 
 Một cách tiện lợi để truy cập các phương thức tìm kiếm toàn cục của Testing Library, giúp việc đọc mã dễ hiểu hơn.
 
-example
+```example
 import { render, screen } from '@testing-library/react';
 
 render(<MyComponent />);
