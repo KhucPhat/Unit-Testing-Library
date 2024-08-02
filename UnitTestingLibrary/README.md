@@ -13,6 +13,14 @@ Currently, two official plugins are available:
 - Câu lệnh chạy npm run test:ui
 - cấu hình tại file package.json
 
+## Video learn course beginners React Testing
+- React Testing for Beginners: Start Here! - https://www.youtube.com/watch?v=8Xwq35cPwYg
+
+## Doc library
+https://testing-library.com/docs/react-testing-library/intro
+
+## Example library
+https://testing-library.com/docs/example-react-formik/
 
 ## Expanding the ESLint configuration
 
