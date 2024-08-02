@@ -9,6 +9,10 @@ Currently, two official plugins are available:
 
 ## Unit Testing Library
 - npm i -D vitest
+- npm i @vitest/ui
+- Câu lệnh chạy npm run test:ui
+- cấu hình tại file package.json
+
 
 ## Expanding the ESLint configuration
 
